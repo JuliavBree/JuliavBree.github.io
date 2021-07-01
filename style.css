@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Strait;
+    overflow-x: hidden;
+    overflow-y: overlay;
+}
+
+@font-face {
+    font-family: Strait;
+    src: url(Strait-Regular.ttf);
+}
+
+@media only screen and (max-width: 480px) {
+    footer .footer {
+    background-color: var(--navbar);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 0;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(64, 59, 55, 0.5) !important;
+}
+
+.on-scroll::-webkit-scrollbar-thumb{
+    background: rgba(64, 59, 55, 1) !important;
+}
+
+.navbar{
+    background-color: var(--navbar);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+}
+
+.navbar .title{
+    font-size: 4rem;
+    color: white;
+    padding: 10px;
+
+}
+
+.navbar .navitems{
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar .navitems li{
+    overflow: hidden;
+}
+
+.navbar .navitems a{
+    font-size: 1.5rem;
+    /*color: white;
+    text-decoration: none;
+    padding: 10px;
+    opacity: 0.5;
+    transition: 0.2s ease opacity;*/
+    color: white;
+    opacity: 0.7;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.5s ease color;
+}
+
+.navbar .navitems a:hover{
+    /*opacity: 1;*/
+    color: var(--red)
+}
+
+.page{
+    background-color: var(--background);
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.footer{
+    background-color: var(--navbar);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    bottom: 0;
+}
+
+.footer p{
+    font-size: 1rem;
+    color: white;
+    padding: 10px;
+}
+
+.index .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner{
+    background-color: #71746d;
+    width: 100vw;
+    height: 333px;
+}
+
+.banner-img {
+    background-image: url("img/banner.jpg");
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    height: 333px;
+}
+
+.index .banner .banner-text{
+    /*position: absolute;*/
+    position: relative;
+    margin-top: 98px;
+    /*left: 50%;
+    transform: translate(-50%, -50%);*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.index .banner .banner-text h2{
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.index .banner .banner-text h2, p{
+    text-align: center;
+    color: white;
+}
+
+.index .solution{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    border: 2px solid var(--red);
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.index .solution a{
+    min-width: calc((20vh + 20vw) / 2);
+}
+
+.index .solution .solution-img{
+    height: calc((20vh + 20vw) / 2);
+    min-width: calc((20vh + 20vw) / 2);
+    padding: 10px;
+}
+
+.index .solution .solution-info{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.index .solution .solution-info .solution-title{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.index .solution .solution-info .solution-text{
+    margin-bottom: 10px;
+}
+
+.index .solution .solution-info a{
+    opacity: 1;
+    transition: 0.5s ease color;
+    color: white;
+    text-decoration: none;
+}
+
+.index .solution .solution-info a:hover{
+    color: black
+}
+
+.solution-page .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.solution-page .content .title{
+    margin-top: 50px;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.solution-page .steps{
+    width: 70vw;
+}
+
+.solution-page .steps .step{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    align-items: center;
+}
+
+.solution-page .steps .step .step-img{
+    height: 60vh;
+    width: 60vw;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid var(--red);
+}
+
+.solution-page .steps .step .step-img a{
+    opacity: 1;
+    transition: 0.2s ease opacity;
+}
+
+.solution-page .steps .step .step-img a:hover{
+    opacity:0.7;
+}
+
+.solution-page .steps .step .step-instruction{ 
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.solution-page .steps .step .step-instruction .step-number{ 
+    padding-right: 50px;
+    font-size: 5rem;
+}
+
+:root{
+    --background:rgb(167,167,167);
+    --navbar:rgb(71,71,71);
+    --red:#f37161; 
+}
