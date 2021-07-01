@@ -6,7 +6,7 @@
         <title>Kauwgom van schoen verwijderen</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body id="scroll" onscroll="showScroll()">
+    <body id="scroll">
         <div class="solution-page page">
             <header class="navbar">
                 <h1 class="title">How To...</h1>
@@ -56,5 +56,21 @@
                 <p>Gemaakt door Julia en Nika</p>
             </footer>
         </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+       $(document).ready(function () {
+            $(window).scroll(function(){
+                var page = document.getElementById("scroll");
+
+                if(page.classList.contains("on-scroll") === false){
+                    page.classList.add("on-scroll");
+
+                    setTimeout(function(){
+                        page.classList.remove("on-scroll");
+                    }, 500);
+                }
+            });
+        });
+    </script>
     </body>
 </html>

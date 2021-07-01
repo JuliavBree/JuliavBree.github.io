@@ -6,7 +6,7 @@
         <title>Kauwgom van schoen verwijderen</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body id="scroll" onscroll="showScroll()">
+    <body id="scroll">
         <div class="solution-page page">
             <header class="navbar">
                 <h1 class="title">How To...</h1>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="step">
-                        <img class="step-img" src=".\img\verbrand.jpeg">
+                        <img class="step-img" src=".\img\verbrand.jpg">
                         <div class="step-instruction">
                             <p class="step-number">2</p>
                             <p>Op een gegeven moment zul je zien dat de kauwgom helemaal zwart is. Zet dan de aansteker uit.</p> 
@@ -56,5 +56,21 @@
                 <p>Gemaakt door Nika en Julia</p>
             </footer>
         </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+       $(document).ready(function () {
+            $(window).scroll(function(){
+                var page = document.getElementById("scroll");
+
+                if(page.classList.contains("on-scroll") === false){
+                    page.classList.add("on-scroll");
+
+                    setTimeout(function(){
+                        page.classList.remove("on-scroll");
+                    }, 500);
+                }
+            });
+        });
+    </script>
     </body>
 </html>
