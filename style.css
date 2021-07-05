@@ -7,7 +7,7 @@
 }
 
 @font-face {
-    font-family: Strait;
+    font-family: Strait, "Helvetica", "Arial";
     src: url(Strait-Regular.ttf);
 }
 
@@ -56,7 +56,6 @@
     font-size: 4rem;
     color: white;
     padding: 10px;
-
 }
 
 .navbar .navitems{
@@ -70,11 +69,6 @@
 
 .navbar .navitems a{
     font-size: 1.5rem;
-    /*color: white;
-    text-decoration: none;
-    padding: 10px;
-    opacity: 0.5;
-    transition: 0.2s ease opacity;*/
     color: white;
     opacity: 0.7;
     text-decoration: none;
@@ -83,7 +77,6 @@
 }
 
 .navbar .navitems a:hover{
-    /*opacity: 1;*/
     color: var(--red)
 }
 
@@ -117,7 +110,7 @@
 }
 
 .banner{
-    background-color: #71746d;
+    background-color: var(--background-banner);
     width: 100vw;
     height: 333px;
 }
@@ -132,11 +125,8 @@
 }
 
 .index .banner .banner-text{
-    /*position: absolute;*/
     position: relative;
     margin-top: 98px;
-    /*left: 50%;
-    transform: translate(-50%, -50%);*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,6 +154,12 @@
 
 .index .solution a{
     min-width: calc((20vh + 20vw) / 2);
+    opacity: 1;
+    transition: 0.2s ease opacity;
+}
+
+.index .solution a:hover{
+    opacity: 0.6;
 }
 
 .index .solution .solution-img{
@@ -255,6 +251,7 @@
 
 :root{
     --background:rgb(167,167,167);
+    --background-banner: #71746d;
     --navbar:rgb(71,71,71);
     --red:#f37161; 
 }

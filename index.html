@@ -1,73 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html role="document">
     <head>
         <meta name="view" content="width=device-width">
         <meta name="author" content="Nika and Julia">
         <title>Kauwgom van schoen verwijderen</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body id="scroll" onscroll="showScroll()">
+    <body id="scroll">
         <div class="index page">
-            <header class="navbar">
+            <header class="navbar" role=navigation>
                 <h1 class="title">How To...</h1>
-                    <ul class="navitems"> 
+                    <ul role="presentation" class="navitems"> 
                         <li>
-                            <a href="index.html">Home</a>
+                            <a role=link href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="verbranden.html">Verbranden</a>
+                            <a role=link href="verbranden.html">Verbranden</a>
                         </li>
                         <li>
-                            <a href="knippen.html">Knippen</a>
+                            <a role=link href="knippen.html">Knippen</a>
                         </li>
                         <li>
-                            <a href="oplossen.html">Oplossen</a>
+                            <a role=link href="oplossen.html">Oplossen</a>
                         </li>
                     </ul>
             </header>
             <section class="content">
-                <div class="banner">
+                <div role="banner" class="banner">
                     <div class="banner-img">
-                        <div class="banner-text">
+                        <div class="banner-text" role="presentation">
                             <h2>Hoe haal je kauwgom van je schoenzool?</h2>
                             <p>Ben je net in een nog zacht sappige kauwgom gaan staan? Hier een aantal manieren om dat plakkerige goedje van je schoenzool te verwijderen.</p></div>
                         </div>
                     </div>
                 <div class="solution" id="verbranden">
-                    <a href="verbranden.html">
-                        <img src="img/aansteker.png" class="solution-img"/>
+                    <a role=link href="verbranden.html">
+                        <img alt="aansteker" src="img/aansteker.png" class="solution-img"/>
                     </a>
-                    <div class="solution-info">
+                    <div class="solution-info" role="presentation">
                         <p class="solution-title">Verbranden</p>
                         <p class="solution-text">Verbranden is een van de simpelste manieren om kauwgom van je schoen te verwijderen. Het kost weinig inspanning en is geschikt voor alle leeftijden. Het enige dat je nodig hebt, is een aansteker. Hendig, toch?</p>
-                        <a href="verbranden.html">Lees meer..</a>
+                        <a role=link href="verbranden.html">Lees meer..</a>
                     </div> 
                 </div>
                 <div class="solution">
-                    <a href="knippen.html">
-                        <img src="img/schaar2.png" class="solution-img"/>
+                    <a role=link href="knippen.html">
+                        <img alt="schaar" src="img/schaar2.png" class="solution-img"/>
                     </a>
-                    <div class="solution-info">
+                    <div class="solution-info" role="presentation">
                         <p class="solution-title">Knippen</p>
                         <p class="solution-text">Knippen is een effectieve manier om kauwgom van je schoen te halen. Het kost wat meer inspanning dan andere manieren is daarom niet geschikt voor kinderen onder de 12 jaar. De benodigdheden zijn dus een schaar en een paar flinke spierballen.</p>
-                        <a href="knippen.html">Lees meer..</a>
+                        <a role=link href="knippen.html">Lees meer..</a>
                     </div> 
                 </div>
                 <div class="solution">
-                    <a href="oplossen.html">
-                        <img src="img/zuur2.png" class="solution-img"/>
+                    <a role=link href="oplossen.html">
+                        <img alt="erlenmeyer" src="img/zuur2.png" class="solution-img"/>
                     </a>
-                    <div class="solution-info">
+                    <div class="solution-info" role="presentation">
                         <p class="solution-title">Oplossen</p>
                         <p class="solution-text">Voor het oplossen van kauwgom onder je schoen moet je er goed voor zorgen dat je  huid bedekt is met bijvoorbeeld handschoenen, aangzien het zuur je huid enigszins kan beschadigen. Wees daarom vooral bereid om wellicht wat pijn te lijden. Maar, alles om die plakkerige zooi van je zool te krijgen!</p>
-                        <a href="oplossen.html">Lees meer..</a>
+                        <a role=link href="oplossen.html">Lees meer..</a>
                     </div> 
                 </div>
             </section>
-            <footer class="footer">
+            <footer class="footer" role="presentation">
                 <p>Copyright &copy;2021</p>
                 <p>Gemaakt door Nika en Julia</p>
             </footer>
         </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+       $(document).ready(function () {
+            $(window).scroll(function(){
+                var page = document.getElementById("scroll");
+
+                if(page.classList.contains("on-scroll") === false){
+                    page.classList.add("on-scroll");
+
+                    setTimeout(function(){
+                        page.classList.remove("on-scroll");
+                    }, 500);
+                }
+            });
+        });
+    </script>
     </body>
 </html>
